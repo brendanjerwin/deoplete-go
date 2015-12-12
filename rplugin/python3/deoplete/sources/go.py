@@ -10,7 +10,7 @@ class Source(Base):
         self.mark = '[go]'
         self.filetypes = ['go']
         self.rank = 100
-        self.min_pattern_length = 0
+        self.min_pattern_length = self.vim.vars['deoplete#auto_completion_start_length']
         self.is_bytepos = True
 
     def get_complete_api(self, findstart):
